@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useSyncExternalStore } from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useState } from 'react';
 import axios from "axios";
@@ -9,12 +9,14 @@ export default function Register() {
 
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [register, setRegister] = useState(false);
+    //const [setRegister] = useState(false);
+    const [register,setRegister] = useState(false);
+
 
     // set configurations
     const configuration = {
         method: "post",
-        url: "https://terawe-chatbot-auth-75749efd1c18.herokuapp.com/register",
+        url: "https://teeawe-chatbot-auth-backend-4e7281a2b796.herokuapp.com/register",
         data: {
           email,
           password,
@@ -26,7 +28,7 @@ export default function Register() {
     // prevent the form from refreshing the whole page
     e.preventDefault();
     // make a popup alert showing the "submitted" text
-
+    //ifClick(true);
     // make the API call
     axios(configuration)
     .then((result) => {
@@ -36,7 +38,9 @@ export default function Register() {
     })
     .catch((error) => {
       error = new Error();
+      //register(true);
       console.log("register unsuccess");
+      alert ("email used")
     });
 
     }
@@ -79,11 +83,13 @@ export default function Register() {
                 </Button>
 
                 {/* display success message */}
-                {/* {register ? (
-                <p className="text-success">You Are Registered Successfully</p>
+                {register ? (
+                <p className="text-success">Successfully</p>
                 ) : (
-                <p className="text-danger">You Are Not Registered</p>
-                )} */}
+                <p className="text-danger"></p>
+                )}
+
+               
 
 
             </Form>  

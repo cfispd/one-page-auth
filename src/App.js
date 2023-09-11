@@ -1,5 +1,5 @@
-
-import { Container, Col, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+// import { Container, Col, Row } from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Register from "./Register";
@@ -7,9 +7,9 @@ import Login from "./Login";
 import Home from "./Home";
 import { Routes, Route } from "react-router-dom";
 // import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import FreeComponent from "./FreeComponent";
-import AuthComponent from "./AuthComponent";
-import ProtectedRoutes from "./ProtectedRoutes";
+// import FreeComponent from "./FreeComponent";
+// import AuthComponent from "./AuthComponent";
+// import ProtectedRoutes from "./ProtectedRoutes";
 
 function App() {
   return (

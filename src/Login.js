@@ -1,5 +1,5 @@
 import React from 'react'
-import { Form, Button, Row, Col} from "react-bootstrap";
+import { Form, Button, Row} from "react-bootstrap";
 import { useState } from 'react';
 import axios from "axios";
 import Cookies from "universal-cookie";
@@ -13,22 +13,24 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [login, setLogin] = useState(false);
+    //const [login, setLogin] = useState(false);
 
     const cookies = new Cookies();
 
     const configuration = {
         method: "post",
-        url: "https://terawe-chatbot-auth-75749efd1c18.herokuapp.com/login",
+        url: "https://teeawe-chatbot-auth-backend-4e7281a2b796.herokuapp.com/login",
         data: {
           email,
           password,
         },
       };
 
+    
+
     const handleSubmit = (e) => {
         // prevent the form from refreshing the whole page
         e.preventDefault();
-        
         // make the API call
         axios(configuration)
         .then((result) => {
@@ -40,10 +42,11 @@ export default function Login() {
             });
 
         // redirect user to the auth page
-        window.location.href = "/auth";
+        //window.location.href = "/";
         })
         .catch((error) => {
         error = new Error();
+        console.log(error);
         console.log("login unsuccess");
         });
       }
@@ -94,11 +97,11 @@ export default function Login() {
                     </Button><a href="/register">Not have a accout?</a>
 
                     {/* display success message */}
-                    {/* {login ? (
+                    {login ? (
                     <p className="text-success">You Are Logged in Successfully</p>
                     ) : (
                     <p className="text-danger">You Are Not Logged in</p>
-                    )} */}
+                    )}
                 </Form>`
             </div>
 
