@@ -1,4 +1,4 @@
-import React, { useSyncExternalStore } from 'react'
+import React from 'react'
 import { Form, Button } from "react-bootstrap";
 import { useState } from 'react';
 import axios from "axios";
