@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 export default function Login() {
 
     return (
-        <div class="col text-center">
+        <div className="col text-center">
             <h2>Chat Robot</h2>
             <Button
                 variant="primary"
@@ -23,6 +23,7 @@ export default function Login() {
                 >
                 Sign up
             </Button>
+            <p>Learn React</p>
         </div>
     )
 }

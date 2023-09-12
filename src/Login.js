@@ -102,6 +102,7 @@ export default function Login() {
                     ) : (
                     <p className="text-danger">You Are Not Logged in</p>
                     )}
+                    <p>Learn React</p>
                 </Form>`
             </div>
 

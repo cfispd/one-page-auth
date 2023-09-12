@@ -88,6 +88,7 @@ export default function Register() {
                 ) : (
                 <p className="text-danger"></p>
                 )}
+                <p>Learn React</p>
 
                
 

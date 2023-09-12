@@ -5,15 +5,15 @@ import Navbar from 'react-bootstrap/Navbar';
 import Register from "./Register";
 import Login from "./Login";
 import Home from "./Home";
-import { Routes, Route } from "react-router-dom";
-// import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+//import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 // import FreeComponent from "./FreeComponent";
 // import AuthComponent from "./AuthComponent";
 // import ProtectedRoutes from "./ProtectedRoutes";
 
 function App() {
   return (
-    <Container>
+    <BrowserRouter>
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
           <Navbar.Brand href="#home">Chat Bot</Navbar.Brand>
@@ -31,7 +31,7 @@ function App() {
         <Route exact path="/login" element={<Login />} />
       </Routes>
 
-    </Container>
+    </BrowserRouter>
   );
 }
 
