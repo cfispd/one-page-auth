@@ -54,7 +54,7 @@ export default function Login() {
   
     return (
         <div className="w-50">
-          
+          <h2>Login</h2>
             <div>
             <Form onSubmit={(e)=>handleSubmit(e)}>
                     {/* email */}
@@ -101,9 +101,8 @@ export default function Login() {
                     <p className="text-success">You Are Logged in Successfully</p>
                     ) : (
                     <p className="text-danger">You Are Not Logged in</p>
-                    )}
-                    <p>Learn React</p>
-                </Form>`
+                    )}              
+                </Form>
             </div>
 
 
