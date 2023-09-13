@@ -34,13 +34,12 @@ export default function Register() {
     .then((result) => {
       setRegister(true);
       console.log("register success");
-      window.location.href = "/login";
     })
     .catch((error) => {
       error = new Error();
       //register(true);
       console.log("register unsuccess");
-      alert ("email used")
+      alert ("Email has been registered")
     });
 
     }
@@ -86,7 +85,7 @@ export default function Register() {
                 {register ? (
                 <p className="text-success">Successfully</p>
                 ) : (
-                <p className="text-danger"></p>
+                <p className="text-danger">Please Register</p>
                 )}
 
                
