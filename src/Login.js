@@ -94,7 +94,7 @@ export default function Login() {
                     onClick={(e) => handleSubmit(e)}
                     >
                     Login
-                    </Button><a href="/register">Not have a accout?</a>
+                    </Button>
 
                     {/* display success message */}
                     {login ? (
